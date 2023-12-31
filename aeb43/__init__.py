@@ -25,7 +25,7 @@ class AEB43:
             with io.open(name, encoding=encoding, mode='r') as f:
                 self._parse(f)
         else:
-            self._parse(f)
+            self._parse(name)
 
     def _parse(self, f):
         account = transaction = None

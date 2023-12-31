@@ -3,6 +3,7 @@
 """Test AEB43
 """
 import datetime as dt
+import io
 import os
 import unittest
 from decimal import Decimal
@@ -58,3 +59,10 @@ class TestAEB43(unittest.TestCase):
         self.assertEqual(
             transaction.items,
             ['COMPRA TARG 5540XXXXXXXX3014 DNH*MICHA', 'EL SCOTT'])
+
+
+class TestAEB43Stream(TestAEB43):
+
+    def setUp(self):
+        with io.open(os.path.join(here, 'AEB43.txt')) as f:
+            self.aeb43 = AEB43(f)
