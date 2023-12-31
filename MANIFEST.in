@@ -1,0 +1,4 @@
+include COPYRIGHT
+include README.rst
+include CHANGELOG
+include aeb43/aeb43.txt
