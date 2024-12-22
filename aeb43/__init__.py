@@ -163,7 +163,7 @@ class Account(_SlotsNone):
 
     @property
     def total_credit(self):
-        return -sum((t.amount for t in self.transactions if t.amount > 0))
+        return sum((t.amount for t in self.transactions if t.amount > 0))
 
 
 class Transaction(_SlotsNone):
