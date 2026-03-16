@@ -1,0 +1,42 @@
+[build-system]
+requires = ['hatchling >= 1', 'hatch-tryton']
+build-backend = 'hatchling.build'
+
+[project]
+name = 'aeb43'
+dynamic = ['version', 'authors']
+dependencies = [
+    'python-stdnum',
+    ]
+requires-python = '>=3.8'
+maintainers = [
+    {name = "Tryton", email = "foundation@tryton.org"},
+    ]
+description = "A module to parse AEB43 files"
+readme = 'README.rst'
+license = 'BSD-3-Clause'
+license-files = ['COPYRIGHT']
+keywords = ["AEB43", "parser"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Topic :: Office/Business",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Utilities",
+    ]
+
+[project.urls]
+homepage = "https://www.tryton.org/"
+changelog = "https://code.tryton.org/aeb43/-/blob/branch/default/CHANGELOG"
+forum = "https://discuss.tryton.org/tags/aeb43"
+issues = "https://bugs.tryton.org/aeb43"
+repository = "https://code.tryton.org/aeb43"
+
+[tool.hatch.version]
+path = 'aeb43/__init__.py'
+
+[tool.hatch.build]
+packages = ['aeb43']
+
+[tool.hatch.metadata.hooks.tryton]
+copyright = 'COPYRIGHT'
