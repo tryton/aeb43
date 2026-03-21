@@ -2,7 +2,7 @@
 # this repository contains the full copyright notices and license terms.
 """a parser for AEB43 files
 """
-__version__ = '0.1.2'
+__version__ = '0.2.0'
 __all__ = ['AEB43']
 
 import datetime as dt
